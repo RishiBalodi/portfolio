@@ -5,50 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <section id="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Your gateway to my works and skills.</p>
-            <a href="#about">Learn More</a>
-        </section>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a passionate web developer...</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </section>
-        <section id="education">
-            <h2>Education</h2>
-            <p>Bachelor's in Computer Science...</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>Project 1</li>
-                <li>Project 2</li>
-            </ul>
-        </section>
-        <section id="resume">
-            <h2>Resume</h2>
-            <a href="resume.pdf">Download My Resume</a>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: example@mail.com</p>
-        </section>
-    </main>
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi! I am Rishi Balodi.</p>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A passionate web developer...</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+        </div>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="event"><h3>Degree in Computer Science (2018-2022)</h3><p>XYZ University</p></div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>A description of project 1...</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>A description of project 2...</p>
+        </div>
+    </section>
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" target="_blank">Download my Resume</a>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <div id="neural-background">
+        <!-- Neural background canvas here -->
+    </div>
+    <div id="certificate-modal">
+        <!-- Certificate modal content here -->
+    </div>
     <footer>
-        <p>&copy; 2026 RishiBalodi. All rights reserved.</p>
+        <p>&copy; 2026 Rishi Balodi</p>
     </footer>
 </body>
 </html>
