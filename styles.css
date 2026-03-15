@@ -1,33 +1,111 @@
-.neural-network {
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+.neural-background {
+    background: url('neural-background.jpg') center/cover no-repeat;
 }
 
 nav {
-    background-color: rgba(2, 2, 36, 0.8);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item {
     color: white;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 20px;
+.nav-item:hover {
+    color: #FF4081;
 }
 
-.hero {
-    height: 100vh;
+.hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.skill-card {
+    perspective: 1000px;
+}
+
+.skill-card .card {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    transition: transform 0.5s;
+}
+
+.skill-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.education-timeline {
+    position: relative;
+    padding: 0;
+}
+
+.education-timeline li {
+    list-style: none;
+    padding: 20px;
+    border-left: 2px solid #ccc;
+    position: relative;
+}
+
+.project-card {
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+button {
+    background-color: #FF4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a03061;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
 }
 
-.about,
-.skills,
-.education,
-.projects {
-    margin: 20px 0;
+@media (max-width: 768px) {
+    /* Mobile styles */
+    .hero-section {
+        flex-direction: column;
+    }
 }
 
-@media (max-width: 768px) {
-    .hero {
-        font-size: 24px;
-    }
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet styles */
+}
+
+@media (min-width: 1025px) {
+    /* Desktop styles */
 }
