@@ -1,0 +1,33 @@
+.neural-network {
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+nav {
+    background-color: rgba(2, 2, 36, 0.8);
+    color: white;
+}
+
+section {
+    padding: 20px;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about,
+.skills,
+.education,
+.projects {
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        font-size: 24px;
+    }
+}
