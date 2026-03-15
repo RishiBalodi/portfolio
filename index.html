@@ -1,87 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishi Balodi | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+  <!-- Neural network background -->
+  <canvas id="neural-bg"></canvas>
+
+  <!-- Main container -->
+  <div class="page-shell">
+    <header class="nav-shell">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">Rishi&nbsp;Balodi</span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Portfolio</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
     </header>
-    <section id="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi! I am Rishi Balodi.</p>
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A passionate web developer...</p>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill-card">
-            <h3>HTML</h3>
-            <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+
+    <main class="card" id="home">
+      <!-- Hero -->
+      <section class="section hero" data-section>
+        <div class="hero-content">
+          <p class="eyebrow">Software Developer · Data Science &amp; Analytics</p>
+          <h1 class="hero-title">
+            Hi, I&apos;m
+            <span class="hero-name">Rishi&nbsp;Balodi</span>
+          </h1>
+          <p class="hero-subtitle">
+            I build intelligent, data‑driven software experiences&mdash;from AI‑powered web applications to analytical dashboards
+            that turn raw data into clear, actionable insights.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View My Work</a>
+          </div>
         </div>
-        <div class="skill-card">
-            <h3>CSS</h3>
-            <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+        <div class="hero-visual">
+          <div class="neural-sphere">
+            <div class="sphere-layer sphere-layer-1"></div>
+            <div class="sphere-layer sphere-layer-2"></div>
+            <div class="sphere-layer sphere-layer-3"></div>
+          </div>
         </div>
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-            <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about" data-section>
+        <div class="section-header">
+          <h2>About</h2>
+          <p>Who I am and what I love building.</p>
         </div>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <div class="timeline">
-            <div class="event"><h3>Degree in Computer Science (2018-2022)</h3><p>XYZ University</p></div>
+        <div class="about-grid">
+          <div class="about-main">
+            <p>
+              <strong>Rishi Balodi</strong> is a Computer Science student at Lovely Professional University who enjoys
+              building intelligent software systems and solving complex problems.
+            </p>
+            <p>
+              He has experience in programming languages including C, C++, Python, and Java. His work also involves
+              machine learning tools, data analysis, and building scalable software applications.
+            </p>
+            <p>
+              As a software developer and data science enthusiast, he enjoys working on projects involving AI, data visualization,
+              and modern software architecture&mdash;from intelligent web apps to decision-focused analytics dashboards.
+            </p>
+          </div>
+          <div class="about-meta">
+            <div class="meta-block">
+              <span class="meta-label">Based in</span>
+              <span class="meta-value">India</span>
+            </div>
+            <div class="meta-block">
+              <span class="meta-label">Focus</span>
+              <span class="meta-value">AI &amp; Data-driven systems</span>
+            </div>
+            <div class="meta-block">
+              <span class="meta-label">Current</span>
+              <span class="meta-value">Computer Science @ LPU</span>
+            </div>
+          </div>
         </div>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-card">
-            <h3>Project 1</h3>
-            <p>A description of project 1...</p>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="skills" data-section>
+        <div class="section-header">
+          <h2>Skills &amp; Tools</h2>
+          <p>A snapshot of the technologies, platforms, and strengths I use to ship reliable, data‑driven solutions.</p>
         </div>
-        <div class="project-card">
-            <h3>Project 2</h3>
-            <p>A description of project 2...</p>
+        <div class="skills-layout">
+          <div class="skills-intro">
+            <h3 class="skills-title">Core skill areas</h3>
+            <p>
+              I work across the stack&mdash;from low‑level C++ and Python for algorithms and data science, to SQL,
+              dashboards, and cloud‑ready tooling that make insights easy to act on.
+            </p>
+            <div class="skill-chips">
+              <span class="chip">Languages</span>
+              <span class="chip">Data &amp; ML</span>
+              <span class="chip">Databases</span>
+              <span class="chip">DevOps &amp; Tools</span>
+              <span class="chip">Soft Skills</span>
+            </div>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">C / C++</span>
+                <span class="skill-value">Advanced</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">Java</span>
+                <span class="skill-value">Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 72%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-value">Advanced</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 86%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">Data &amp; ML (TensorFlow, Scikit‑Learn, Pandas, SciPy)</span>
+                <span class="skill-value">Applied</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 82%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">SQL &amp; MySQL</span>
+                <span class="skill-value">Strong</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 84%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">Power BI &amp; Advanced Excel</span>
+                <span class="skill-value">Analytics‑focused</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">Git / GitHub</span>
+                <span class="skill-value">Daily driver</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 78%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">Linux &amp; Docker</span>
+                <span class="skill-value">Working</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-card soft" data-tilt>
+              <div class="skill-card-header">
+                <span class="skill-name">Soft skills</span>
+                <span class="skill-value">Team‑ready</span>
+              </div>
+              <div class="soft-tags">
+                <span>Problem solving</span>
+                <span>Team collaboration</span>
+                <span>Adaptability</span>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="resume.pdf" target="_blank">Download my Resume</a>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <div id="neural-background">
-        <!-- Neural background canvas here -->
+      </section>
+
+      <!-- Education & Achievements -->
+      <section class="section" id="education" data-section>
+        <div class="section-header">
+          <h2>Education &amp; Achievements</h2>
+          <p>Academic journey, certifications, and milestones that shape how I think about engineering and data.</p>
+        </div>
+
+        <div class="edu-layout">
+          <!-- Left: timeline list -->
+          <div class="edu-timeline">
+            <button type="button" class="edu-timeline-card active" data-edu-index="0" aria-pressed="true">
+              <span class="edu-timeline-dates">Aug 2023 &mdash; Present</span>
+              <span class="edu-timeline-school">Lovely Professional University</span>
+              <span class="edu-timeline-badge ongoing"><span class="dot"></span> Ongoing</span>
+            </button>
+            <button type="button" class="edu-timeline-card" data-edu-index="1" aria-pressed="false">
+              <span class="edu-timeline-dates">Apr 2020 &mdash; Mar 2022</span>
+              <span class="edu-timeline-school">R.P. Public School</span>
+              <span class="edu-timeline-badge score">✓ 72.2%</span>
+            </button>
+            <button type="button" class="edu-timeline-card" data-edu-index="2" aria-pressed="false">
+              <span class="edu-timeline-dates">Apr 2018 &mdash; Mar 2020</span>
+              <span class="edu-timeline-school">R.P. Public School</span>
+              <span class="edu-timeline-badge score">✓ 84.4%</span>
+            </button>
+          </div>
+
+          <!-- Right: detail panel -->
+          <div class="edu-detail-panel">
+            <div class="edu-detail-content active" data-edu-index="0">
+              <h3 class="edu-detail-title">B.Tech &mdash; Computer Science &amp; Engineering</h3>
+              <div class="edu-detail-meta">
+                <span class="edu-detail-loc">📍 Punjab, India</span>
+                <span class="edu-detail-date">🗓️ Aug 2023 &mdash; Present</span>
+              </div>
+              <div class="edu-detail-score">
+                <span class="edu-detail-score-value">7.16</span>
+                <span class="edu-detail-score-label">CGPA</span>
+              </div>
+              <p class="edu-detail-desc">
+                Focused on software development, cloud infrastructure, and data science. Active in coding, problem solving,
+                and building data‑centric projects that combine AI and analytics.
+              </p>
+              <div class="edu-detail-tags">
+                <span>Software Engineering</span>
+                <span>Data Science</span>
+                <span>AI &amp; ML</span>
+              </div>
+            </div>
+
+            <div class="edu-detail-content" data-edu-index="1">
+              <h3 class="edu-detail-title">Intermediate &mdash; Science (12th)</h3>
+              <div class="edu-detail-meta">
+                <span class="edu-detail-loc">📍 Kotdwara, Uttarakhand</span>
+                <span class="edu-detail-date">🗓️ Apr 2020 &mdash; Mar 2022</span>
+              </div>
+              <div class="edu-detail-score">
+                <span class="edu-detail-score-value">72.2%</span>
+                <span class="edu-detail-score-label">Score</span>
+              </div>
+              <p class="edu-detail-desc">
+                Completed senior secondary education with a science stream, building a strong foundation in mathematics and physics.
+              </p>
+              <div class="edu-detail-tags">
+                <span>Mathematics</span>
+                <span>Physics</span>
+                <span>Chemistry</span>
+              </div>
+            </div>
+
+            <div class="edu-detail-content" data-edu-index="2">
+              <h3 class="edu-detail-title">Matriculation (10th)</h3>
+              <div class="edu-detail-meta">
+                <span class="edu-detail-loc">📍 Kotdwara, Uttarakhand</span>
+                <span class="edu-detail-date">🗓️ Apr 2018 &mdash; Mar 2020</span>
+              </div>
+              <div class="edu-detail-score">
+                <span class="edu-detail-score-value">84.4%</span>
+                <span class="edu-detail-score-label">Score</span>
+              </div>
+              <p class="edu-detail-desc">
+                Achieved a strong academic base across all subjects, with emphasis on mathematics and science.
+              </p>
+              <div class="edu-detail-tags">
+                <span>Top Scorer</span>
+                <span>Science &amp; Math</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights & Certificates row -->
+        <div class="edu-extra">
+          <div class="achievements-block">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Sharpened problem‑solving skills by consistently practicing coding questions on platforms like LeetCode and GFG.</li>
+              <li>Completed hands‑on projects that combine AI, data analysis, and clean software design patterns.</li>
+              <li>Comfortable presenting technical work through structured reports, dashboards, and project documentation.</li>
+            </ul>
+          </div>
+          <div class="achievements-block">
+            <h3>Certificates</h3>
+            <p class="achievements-note">Click a certificate to preview the original document.</p>
+            <div class="cert-grid">
+              <button class="cert-chip" data-cert-image="assets/cert-cloud-computing.png">Cloud Computing &mdash; NPTEL, IIT Kharagpur</button>
+              <button class="cert-chip" data-cert-image="assets/cert-networking-basics.png">Bits &amp; Bytes of Computer Networking</button>
+              <button class="cert-chip" data-cert-image="assets/cert-hardware-os.png">Hardware and Operating Systems</button>
+              <button class="cert-chip" data-cert-image="assets/cert-one-india-initiative.png">One India Initiative Program</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projects" data-section>
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Selected work across AI, data, and software design.</p>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-tilt>
+            <div class="project-media project-media-1">
+              <img src="assets/ai-language-translator.png" alt="Screenshot of AI multilingual translation web app interface" />
+            </div>
+            <div class="project-body">
+              <h3>AI Multilingual Translation Web App</h3>
+              <p>
+                A Flask web application that performs real-time language translation using Gemini API. It automatically
+                detects the input language and translates it into multiple languages using structured REST API requests
+                and secure backend integration.
+              </p>
+              <div class="project-tags">
+                <span>Flask</span>
+                <span>Gemini API</span>
+                <span>REST</span>
+                <span>AI</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/RishiBalodi/Language-Translation-Project" target="_blank" rel="noopener" class="btn ghost">
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-tilt>
+            <div class="project-media project-media-2">
+              <img src="assets/climate-change-analysis.png" alt="Charts and visualizations from climate change data analysis project" />
+            </div>
+            <div class="project-body">
+              <h3>Climate Change Data Analysis</h3>
+              <p>
+                A Python data analysis project exploring the impact of climate change on agricultural productivity. The
+                project performs data preprocessing, exploratory data analysis, and visualization using libraries like
+                Pandas, NumPy, and Matplotlib.
+              </p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/RishiBalodi/Python-Data-Analysis" target="_blank" rel="noopener" class="btn ghost">
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-tilt>
+            <div class="project-media project-media-3">
+              <img src="assets/shopping-cart-system.png" alt="Shopping cart discount system UI showcasing applied offers and checkout summary" />
+            </div>
+            <div class="project-body">
+              <h3>Shopping Cart Discount System</h3>
+              <p>
+                An object-oriented shopping cart system built using C++. It implements design patterns such as Strategy
+                and Chain of Responsibility to support flexible discount rules and modular pricing logic.
+              </p>
+              <div class="project-tags">
+                <span>C++</span>
+                <span>OOP</span>
+                <span>Design Patterns</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/RishiBalodi/shopping-Cart-System" target="_blank" rel="noopener" class="btn ghost">
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-tilt>
+            <div class="project-media project-media-4">
+              <img src="assets/excel-data-dashboard.png" alt="Excel-based business analytics dashboard with KPIs and interactive charts" />
+            </div>
+            <div class="project-body">
+              <h3>Excel Data Dashboard</h3>
+              <p>
+                An interactive business analytics dashboard built using Microsoft Excel. It uses pivot tables, charts,
+                and automated calculations to visualize business performance and key insights.
+              </p>
+              <div class="project-tags">
+                <span>Excel</span>
+                <span>Dashboards</span>
+                <span>Analytics</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/RishiBalodi/Excel-Dashboard" target="_blank" rel="noopener" class="btn ghost">
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Resume -->
+      <section class="section" id="resume" data-section>
+        <div class="section-header">
+          <h2>Resume</h2>
+          <p>A concise view of my journey as a software developer and data-focused problem solver.</p>
+        </div>
+        <div class="resume-block">
+          <p>
+            Download my CV to explore my academic background, software development experience, and hands-on work across AI,
+            data science, and analytics projects.
+          </p>
+          <a href="assets/cv.pdf" class="btn primary" target="_blank" rel="noopener">
+            View CV
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact" data-section>
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Let’s talk about ideas, collaborations, or opportunities.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:rishibalodi9@gmail.com" class="contact-value">rishibalodi9@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/RishiBalodi" target="_blank" rel="noopener" class="contact-value">
+                github.com/RishiBalodi
+              </a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/rishibalodi/" target="_blank" rel="noopener" class="contact-value">
+                linkedin.com/in/rishibalodi
+              </a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a href="tel:8126962119" class="contact-value">8126962119</a>
+            </div>
+          </div>
+          <form class="contact-form" autocomplete="off">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Say hello..."></textarea>
+            </div>
+            <button type="submit" class="btn primary full-width">
+              Send Message
+            </button>
+            <p class="form-note">This demo form does not send emails yet.</p>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>&copy; <span id="year"></span> Rishi Balodi. Crafted with a neural-inspired aesthetic.</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Certificate modal -->
+  <div class="cert-modal" id="cert-modal" aria-hidden="true">
+    <div class="cert-modal-backdrop"></div>
+    <div class="cert-modal-content" role="dialog" aria-modal="true">
+      <button class="cert-close" id="cert-close" aria-label="Close certificate view">&times;</button>
+      <img src="" alt="Certificate preview" id="cert-image" />
     </div>
-    <div id="certificate-modal">
-        <!-- Certificate modal content here -->
-    </div>
-    <footer>
-        <p>&copy; 2026 Rishi Balodi</p>
-    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
