@@ -1238,3 +1238,17 @@ button {
   }
 }
 
+.hero-socials{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.hero-socials img{
+  transition: transform 0.2s ease;
+  cursor:pointer;
+}
+
+.hero-socials img:hover{
+  transform:scale(1.2);
+}
